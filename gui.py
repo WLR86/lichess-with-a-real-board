@@ -90,9 +90,9 @@ def start_game(ignore=None):
     if selected_voice != VOICE_OPTIONS[0]:
         voice_index = VOICE_OPTIONS.index(selected_voice) - 1
         arguments.append("voice=" + str(voice_index))
-        language = "English"
-        languages = ["English", "German", "Russian", "Turkish", "Italian"]
-        codes = ["en_", "de_", "ru_", "tr_", "it_"]
+        language = "French"
+        languages = ["English", "German", "Russian", "Turkish", "Italian", "French"]
+        codes = ["en_", "de_", "ru_", "tr_", "it_", "fr_"]
         for l, c in zip(languages, codes):
             if (l in selected_voice) or (l.lower() in selected_voice) or (c in selected_voice):
                 language = l
