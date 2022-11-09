@@ -21,6 +21,7 @@ class Lichess_game:
         self.is_our_turn = self.we_play_white
         self.client = client
         self.game_id = game['gameId']
+        print("Game ID is " + games[0]['gameId'])
         self.token = token
         self.save_file = "promotion.bin"
         self.promotion_pieces = {

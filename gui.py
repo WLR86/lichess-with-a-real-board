@@ -112,7 +112,7 @@ def start_game(ignore=None):
 
 
 window = tk.Tk()
-window.title("Lichess with a real board by Alper Karayaman")
+window.title("Lichess with a real board by Alper Karayaman forked by Weetos & Liam")
 
 token = tk.StringVar()
 comment_me = tk.IntVar()
