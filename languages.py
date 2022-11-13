@@ -318,7 +318,7 @@ class Italian:
 class French:
     def __init__(self):
         self.game_started = "La partie a commencé"
-        self.move_failed = "la détection du mouvement a échoué. Merci de bien vouloir reproduire le mouvement"
+        self.move_failed = "échec de lecture, réitérez le coup."
 
     def name(self, piece_type):
         if piece_type == chess.PAWN:
