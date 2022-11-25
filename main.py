@@ -184,4 +184,4 @@ while not game.board.is_game_over() and not game.commentator.game_state.resign_o
         move_fgbg.apply(frame)
         previous_frame_queue.append(frame)
 cv2.destroyAllWindows()
-time.sleep(2)
+time.sleep(1)
