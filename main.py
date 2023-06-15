@@ -11,7 +11,7 @@ from board_basics import Board_basics
 from helper import perspective_transform
 from speech import Speech_thread
 from videocapture import Video_capture_thread
-from languages import *
+from languages import English, German, French, Russian, Turkish, Italian
 
 comment_me = False
 comment_opponent = False
@@ -76,8 +76,10 @@ video_capture_thread.daemon = True
 video_capture_thread.capture = cv2.VideoCapture(cap_index, cap_api)
 video_capture_thread.start()
 
-pts1 = np.float32([list(corners[0][0]), list(corners[8][0]), list(corners[0][8]),
-                   list(corners[8][8])])
+pts1 = np.float32([list(corners[0][0]),
+    list(corners[8][0]),
+    list(corners[0][8]),
+    list(corners[8][8])])
 
 
 def waitUntilMotionCompletes():
@@ -166,7 +168,7 @@ while not game.board.is_game_over() and not game.commentator.game_state.resign_o
         last_frame = stabilize_background_subtractors()
         previous_frame = previous_frame_queue[0]
 
-        if (game.is_light_change(last_frame) == False) and game.register_move(fgmask, previous_frame, last_frame):
+        if (game.is_light_change(last_frame) is False) and game.register_move(fgmask, previous_frame, last_frame):
             pass
             # cv2.imwrite(game.executed_moves[-1] + " frame.jpg", last_frame)
             # cv2.imwrite(game.executed_moves[-1] + " mask.jpg", fgmask)
